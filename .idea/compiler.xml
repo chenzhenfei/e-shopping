@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="e-shopping-api-member" />
+        <module name="e-shopping-eurekaserver" />
+        <module name="e-shopping-member" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="e-shopping-api" target="1.8" />
+      <module name="e-shopping-api-member" target="1.8" />
+      <module name="e-shopping-common" target="1.8" />
+      <module name="e-shopping-eurekaserver" target="1.8" />
+      <module name="e-shopping-member" target="1.8" />
+      <module name="e-shopping-parent" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

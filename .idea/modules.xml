@@ -3,6 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/e-shopping.iml" filepath="$PROJECT_DIR$/.idea/e-shopping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e-shopping-parent/e-shopping-api/e-shopping-api.iml" filepath="$PROJECT_DIR$/e-shopping-parent/e-shopping-api/e-shopping-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e-shopping-parent/e-shopping-api.iml" filepath="$PROJECT_DIR$/e-shopping-parent/e-shopping-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e-shopping-parent/e-shopping-api/e-shopping-api-member/e-shopping-api-member.iml" filepath="$PROJECT_DIR$/e-shopping-parent/e-shopping-api/e-shopping-api-member/e-shopping-api-member.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e-shopping-parent/e-shopping-common/e-shopping-common.iml" filepath="$PROJECT_DIR$/e-shopping-parent/e-shopping-common/e-shopping-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e-shopping-parent/e-shopping-eurekaserver/e-shopping-eurekaserver.iml" filepath="$PROJECT_DIR$/e-shopping-parent/e-shopping-eurekaserver/e-shopping-eurekaserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e-shopping-parent/e-shopping-member/e-shopping-member.iml" filepath="$PROJECT_DIR$/e-shopping-parent/e-shopping-member/e-shopping-member.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e-shopping-parent/e-shopping-parent.iml" filepath="$PROJECT_DIR$/e-shopping-parent/e-shopping-parent.iml" />
     </modules>
   </component>
 </project>
