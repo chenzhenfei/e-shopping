@@ -11,10 +11,6 @@
 
     <artifactId>e-shopping-common</artifactId>
     <packaging>pom</packaging>
-    <modules>
-        <module>e-shopping-eurekaserver</module>
-    </modules>
-
 
     <dependencies>
         <dependency>

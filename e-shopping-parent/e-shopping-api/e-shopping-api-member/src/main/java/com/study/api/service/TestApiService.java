@@ -1,6 +1,7 @@
 package com.study.api.service;
 
 
+import com.study.base.ResponseBase;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -34,4 +35,11 @@ public interface TestApiService {
     @Produces(value=MediaType.APPLICATION_JSON) /**處理相應類型**/
     @Consumes(value = MediaType.TEXT_PLAIN)
     public Map<String,Object> test(@ApiParam(value = "会员id") Integer id, @ApiParam("会员名称") String name);
+
+    @RequestMapping(value = "/testResponseBase",method = RequestMethod.GET)
+    @Path("/testResponseBase")
+    @ApiOperation(value = "测试接口统一响应定义",notes = "测试接口统一响应定义",response = ResponseBase.class)
+    @Produces(value=MediaType.APPLICATION_JSON) /**處理相應類型**/
+    @Consumes(value = MediaType.TEXT_PLAIN)
+    public ResponseBase testResponseBase();
 }

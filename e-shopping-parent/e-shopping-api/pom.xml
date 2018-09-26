@@ -15,4 +15,12 @@
     </modules>
     <packaging>pom</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.study</groupId>
+            <artifactId>e-shopping-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 </project>

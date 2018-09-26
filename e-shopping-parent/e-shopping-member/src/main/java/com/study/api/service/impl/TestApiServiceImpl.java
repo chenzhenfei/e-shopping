@@ -2,13 +2,18 @@ package com.study.api.service.impl;
 
 
 import com.study.api.service.TestApiService;
+import com.study.base.ResponseBase;
+import com.study.base.ResponseBaseService;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
 public class TestApiServiceImpl implements TestApiService {
+    @Resource
+    private ResponseBaseService responseBaseService;
     /**
      *
      * @param id
@@ -27,4 +32,9 @@ public class TestApiServiceImpl implements TestApiService {
         result.put("data", "id:"+id+",name"+name);
         return result;
     }
+
+    @Override
+    public ResponseBase testResponseBase() {
+        return responseBaseService.setResultSuccess();
+}
 }
