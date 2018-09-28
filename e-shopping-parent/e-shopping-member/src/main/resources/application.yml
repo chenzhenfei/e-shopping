@@ -3,8 +3,21 @@ server:
 spring:
   application:
     name: member
-
+  redis:
+        host: 192.168.18.129 #redis 服务器
+  #      password:   #redis 密码
+        port: 6379 #redis 端口
+        lettuce:
+          pool:
+            max-idle: 30
+            max-active: 30
+            min-idle: 0
+            max-wait: -1ms
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8760/eureka/
+
+
+ # 运行时可以在控制台查看  启用和未启用的配置报告查看
+debug: true

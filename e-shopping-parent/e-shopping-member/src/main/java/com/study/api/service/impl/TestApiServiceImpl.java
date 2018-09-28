@@ -2,8 +2,10 @@ package com.study.api.service.impl;
 
 
 import com.study.api.service.TestApiService;
+import com.study.base.BaseRedisService;
 import com.study.base.ResponseBase;
 import com.study.base.ResponseBaseService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -12,6 +14,10 @@ import java.util.Map;
 
 @RestController
 public class TestApiServiceImpl implements TestApiService {
+    @Resource
+    private BaseRedisService baseRedisService;
+
+
     @Resource
     private ResponseBaseService responseBaseService;
     /**
@@ -37,4 +43,18 @@ public class TestApiServiceImpl implements TestApiService {
     public ResponseBase testResponseBase() {
         return responseBaseService.setResultSuccess();
 }
+
+
+    @Override
+    public ResponseBase testRedis(String key, String value) {
+        baseRedisService.set(key,value);
+        return responseBaseService.setResultSuccess();
+    }
+
+    @Override
+    public ResponseBase  getRedis(String key) {
+        String result=(String) baseRedisService.get(key);
+        return responseBaseService.setResultSuccess(result);
+    }
+
 }

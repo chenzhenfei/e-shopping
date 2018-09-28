@@ -42,4 +42,18 @@ public interface TestApiService {
     @Produces(value=MediaType.APPLICATION_JSON) /**處理相應類型**/
     @Consumes(value = MediaType.TEXT_PLAIN)
     public ResponseBase testResponseBase();
+
+    @ApiOperation(value = "测试接口统一响应定义",notes = "测试接口统一响应定义",response = ResponseBase.class)
+    @Produces(value=MediaType.APPLICATION_JSON) /**處理相應類型**/
+    @Consumes(value = MediaType.TEXT_PLAIN)
+    @RequestMapping(value = "/testRedis",method = RequestMethod.GET)
+    public ResponseBase testRedis(String key,String value);
+
+    @ApiOperation(value = "测试接口统一响应定义",notes = "测试接口统一响应定义",response = ResponseBase.class)
+    @Produces(value=MediaType.APPLICATION_JSON) /**處理相應類型**/
+    @Consumes(value = MediaType.TEXT_PLAIN)
+    @RequestMapping(value = "/getRedis",method = RequestMethod.GET)
+    public ResponseBase getRedis(String key);
+
+
 }

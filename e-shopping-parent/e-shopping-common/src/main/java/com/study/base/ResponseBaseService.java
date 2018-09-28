@@ -2,10 +2,11 @@ package com.study.base;
 
 import com.study.constants.ResponseConstants;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.ws.rs.Consumes;
 
-@Component
+@Service
 public class ResponseBaseService {
 
     //返回成功，返回数据data
