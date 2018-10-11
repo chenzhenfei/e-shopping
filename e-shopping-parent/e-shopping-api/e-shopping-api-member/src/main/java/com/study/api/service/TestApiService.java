@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * api 对外接口层， 后期会继承cxf jax-rs 实现rest 方式接口调用
  */
-@RequestMapping("/member")
+@RequestMapping("/stest")
 @Api(value = "会员服务接口",description = "会员服务接口")
 @Path("/member")
 public interface TestApiService {
