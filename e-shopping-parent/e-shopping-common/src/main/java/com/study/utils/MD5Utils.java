@@ -54,6 +54,7 @@ public class MD5Utils {
             }
         }
         String salt = sb.toString();
+        System.out.println(salt);
         password = MD5(password + salt);
         char[] cs = new char[48];
         for (int i = 0; i < 48; i += 3) {

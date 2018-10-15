@@ -4,9 +4,15 @@ server:
 spring:
   application:
     name: message
-
+  activemq:
+    broker-url: tcp://localhost:61616
+    in-memory: false
+    pool:
+      enabled: false
 # 注册到eureka 注册中心
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8760/eureka/
+message:
+   destionName: test

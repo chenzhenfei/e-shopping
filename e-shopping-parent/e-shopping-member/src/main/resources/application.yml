@@ -35,28 +35,28 @@ spring:
         testOnReturn: false
         poolPreparedStatements: true
         maxOpenPreparedStatements: 20
-# 消息队列
+# 消息队列  # in-memory不适用内存代替 外部中间件（官方demo采用 memeroy 实现效果）
   activemq:
-    broker-url: tcp://localhost:61616
-    in-memory: false  #不适用内存代替 外部中间件（官方demo采用 memeroy 实现效果）
-    pool:
-      enabled: true
-      max-connections: 100
-      idle-timeout: 5000
-      expiry-timeout: 0
+      broker-url: tcp://localhost:61616
+      in-memory: false
+      pool:
+        enabled: true
+        max-connections: 100
+        idle-timeout: 5000
+        expiry-timeout: 0
     #默认情况下activemq提供的是queue模式，若要使用topic模式需要配置下面配置
     #  spring.jms.pub-sub-domain=true
 #    user:
 #    password:
 #配置 mq的节点
-   mq_destionName: test
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8760/eureka/
 
-
+message:
+       destionName: test
 # 配置数据源
  # 运行时可以在控制台查看  启用和未启用的配置报告查看
 debug: true

@@ -14,6 +14,6 @@ public interface MemberMapper {
     MemberEntity findById(@Param("userId") long userId);
 
 
-    @Insert("INSERT  INTO `mb_user`  (username,password,phone,email,created,updated) VALUES (#{username}, #{password},#{phone},#{email},#{created},#{updated});")
+    @Insert("INSERT  INTO `mb_user`  (username,password,salt,phone,email,created,updated) VALUES (#{username}, #{password},#{salt},#{phone},#{email},#{created},#{updated});")
     Integer insertUser(MemberEntity userEntity);
 }
