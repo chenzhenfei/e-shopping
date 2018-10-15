@@ -1,5 +1,6 @@
 package com.study.api.service.impl;
 
+import com.study.activemq.ProducerService;
 import com.study.api.entity.MemberEntity;
 import com.study.api.service.MemberService;
 import com.study.base.ResponseBase;
@@ -8,9 +9,7 @@ import com.study.dao.mybatis.MemberMapper;
 import com.study.utils.MD5Utils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -18,6 +17,8 @@ import javax.annotation.Resource;
 
 @RestController
 public class MemberServiceImpl implements MemberService {
+    @Autowired
+    private ProducerService producer;
 
     @Resource
     private MemberMapper memberMapper;
@@ -36,6 +37,7 @@ public class MemberServiceImpl implements MemberService {
         if (result <= 0) {
             return responseBaseService.setResultError("用户注册失败");
         }
+        // 发送消息到消息中间件
         return responseBaseService.setResultSuccess("用户注册成功");
     }
 
@@ -47,4 +49,9 @@ public class MemberServiceImpl implements MemberService {
         }
         return responseBaseService.setResultSuccess(user);
     }
+
+    public void sendMsg(String json){
+        producer.sendMsg(json);  //
+    }
+
 }

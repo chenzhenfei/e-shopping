@@ -12,6 +12,7 @@
         <module>e-shopping-eurekaserver</module>
         <module>e-shopping-api</module>
         <module>e-shopping-member</module>
+        <module>e-shopping-message</module>
     </modules>
     <packaging>pom</packaging> <!-- packageing 打包方式改为pom ,后续作为parent 项目被子项目作引入 -->
     <parent>

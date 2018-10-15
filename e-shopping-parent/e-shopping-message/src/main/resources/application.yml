@@ -1,0 +1,12 @@
+server:
+  port: 8763
+
+spring:
+  application:
+    name: message
+
+# 注册到eureka 注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8760/eureka/
