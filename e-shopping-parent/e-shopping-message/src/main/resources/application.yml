@@ -9,6 +9,18 @@ spring:
     in-memory: false
     pool:
       enabled: false
+  # 邮件配置 定义发件人的邮箱
+  mail:
+    host: stmp.163.com
+    username: chenzhenfei_study@163.com
+    password: czf11100247
+
+  smtp:
+       auth: true
+       starttls:
+          enable: true
+              required: true
+
 # 注册到eureka 注册中心
 eureka:
   client:
@@ -16,3 +28,5 @@ eureka:
       defaultZone: http://localhost:8760/eureka/
 message:
    destionName: test
+
+

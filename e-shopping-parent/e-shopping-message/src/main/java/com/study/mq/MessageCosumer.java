@@ -2,6 +2,7 @@ package com.study.mq;
 
 import com.alibaba.fastjson.JSONObject;
 import com.study.adapter.EmailMessageService;
+import com.study.adapter.EmailMessageServiceImpl;
 import com.study.adapter.MessageAdapter;
 import com.study.constants.Constants;
 import lombok.extern.slf4j.Slf4j;
@@ -27,13 +28,14 @@ public class MessageCosumer {
         JSONObject msgJsonObject = JSONObject.parseObject(messageJson);
         JSONObject header = (JSONObject) msgJsonObject.get(Constants.MESSAGE_HEADER);
         if (Constants.INTERFACETYPE_MSG_EMAIL.equals(header.get(Constants.INTERFACETYPE))) {
-            messageAdapter =new EmailMessageService();
+            messageAdapter =new EmailMessageServiceImpl();
         }else{
             return ;
         }
         /**
          * 调用第三方接口发送消息
          */
-        messageAdapter.sendMessage(messageJson);
+        JSONObject sendObj =JSONObject.parseObject(messageJson);
+        messageAdapter.sendMessage(sendObj);
     }
 }
